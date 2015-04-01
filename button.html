@@ -9,6 +9,10 @@
       background-color: #ff0000;
     }
 
+    #main {
+      margin: 0 auto;
+    }
+
     .container {
       margin-left: 100px;
       margin-top: 100px;
@@ -38,7 +42,7 @@
       border: 3px solid #000;
     }
 
-    .img {
+    .cat {
       position: absolute;
       left: 50;
       margin-top: 30px;
@@ -67,7 +71,13 @@
       padding-left: 130px;
       padding-top: 10px;
       font-size: 2.6em;
+    }
 
+    .arrow {
+      position: absolute;
+      z-index: 999;
+      left: 400px;
+      top: 250px;
     }
   </style>
 </head>
@@ -107,14 +117,17 @@
     5. Refactor 
   -->
 
-  <div>
+  <div id="main">
     <div class="container">
       <div class="circle"></div>
-      <div class="img">
+      <div class="cat">
         <img src="images/cat.png" alt="Cat">
       </div>
       <div class="text-box">
         <h1>Cat Lover</h1>
+      </div>
+      <div class="arrow">
+        <img src="images/arrow.png" alt="Arrow">
       </div>
     </div>
   </div>
