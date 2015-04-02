@@ -1,11 +1,9 @@
-'use strict';
-
 window.onload = function() {
-  var circle = document.getElementById('circle');
-  var cat = document.getElementById('cat');
-  var textBox = document.getElementById('text-box');
-  var text = document.getElementById('text');
-  var arrow = document.getElementById('arrow');
+  var circle  = document.getElementById('circle'),
+      cat     = document.getElementById('cat'),
+      textBox = document.getElementById('text-box'),
+      text    = document.getElementById('text'),
+      arrow   = document.getElementById('arrow')
   
   TweenLite.from(circle, 0.4, {
     scale: 0
@@ -24,8 +22,28 @@ window.onload = function() {
   });
 
   TweenLite.from(text, 0.5, {
-    left: -100,
+    x: -100,
+    scale: 0,
     delay: 0.2
   });
 
+  TweenLite.from(arrow, 0.4, {
+    scale: 0,
+    top: 290,
+    left: 440,
+    delay: 0.4
+  });
+
+  TweenMax.to(arrow, 0.3, {
+    delay: 1,
+    top: 290,
+    left: 440,
+    repeat: -1,
+    yoyo: true
+  });
+
+  document.getElementById('container').onclick = function() {
+    TweenMax.killAll();
+    TweenLite.to(this, 0.5, {opacity: 0});
+  }
 };
