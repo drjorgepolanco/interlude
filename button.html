@@ -9,10 +9,6 @@
       background-color: #ff0000;
     }
 
-    #main {
-      margin: 0 auto;
-    }
-
     #container {
       margin-left: 100px;
       margin-top: 100px;
@@ -55,7 +51,6 @@
     }
 
     #text-box {
-      /*display: none;*/
       background-color: #fff;
       border-top-right-radius: 50px; 
       border-bottom-right-radius: 50px;
@@ -73,7 +68,6 @@
     }
 
     #text {
-      /*opacity: 0;*/
       font-family: 'Nunito', sans-serif;
       position: absolute;
       padding-left: 130px;
@@ -150,7 +144,7 @@
       var circle = document.getElementById('circle');
       var cat = document.getElementById('cat');
       var textBox = document.getElementById('text-box');
-      // var text = document.getElementById('text');
+      var text = document.getElementById('text');
       
       TweenLite.from(circle, 0.4, {
         scale: 0
@@ -168,10 +162,10 @@
         borderRight: 0
       });
 
-      // TweenLite.from(text, 1, {
-      //   left: 0, 
-      //   delay: 0.6
-      // });
+      TweenLite.from(text, 0.5, {
+        left: -100,
+        delay: 0.2
+      });
     };
 
   </script> 
