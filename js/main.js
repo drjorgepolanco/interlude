@@ -44,6 +44,32 @@ window.onload = function() {
 
   document.getElementById('container').onclick = function() {
     TweenMax.killAll();
-    TweenLite.to(this, 0.5, {opacity: 0});
+    
+    TweenLite.to(arrow, 0.3, {
+      opacity: 0
+    });
+
+    TweenLite.to(text, 0.3, {
+      x: -100,
+      scale: 0
+    });
+
+    TweenLite.to(textBox, 0.3, {
+      width: 0, 
+      delay: 0.1,
+      borderBottom: 0,
+      borderTop: 0,
+      borderRight: 0
+    });
+
+    TweenLite.to(cat, 0.4, {
+      scale: 0,
+      delay: 0.3
+    });
+
+    TweenLite.to(circle, 0.4, {
+      scale: 0,
+      delay: 0.3
+    });
   }
 };
